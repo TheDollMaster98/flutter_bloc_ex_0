@@ -16,7 +16,7 @@ class FlutterBlocExApp extends StatelessWidget {
         builder: (context, theme) {
           return MaterialApp(
             title: 'Flutter Bloc & Cubit Demo',
-            theme: theme, // Applica il tema corrente
+            theme: theme, // Applica il tema corrente (Light/Dark)
             home: HomePage(),
           );
         },
