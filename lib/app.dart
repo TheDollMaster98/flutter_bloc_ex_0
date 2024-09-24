@@ -13,13 +13,17 @@ class FlutterBlocExApp extends StatelessWidget {
     // per rendere il Bloc accessibile lungo l'albero dei widget.
     return BlocProvider(
       create: (context) => ThemeCubit(),
+      // BlocBuilder ascolta i cambiamenti di ThemeCubit e ricostruisce MaterialApp di conseguenza:
+      // Si occupa di ricostruire parti dell'interfaccia utente in risposta ai cambiamenti di stato emessi da un Bloc o Cubit.
+      // In altre parole, BlocBuilder ascolta lo stato di un Bloc o Cubit specifico
+      // e aggiorna il suo widget figlio ogni volta che lo stato cambia.
+      // BlocBuilder<BlocType, StateType>
       child: BlocBuilder<ThemeCubit, ThemeData>(
-        // BlocBuilder ascolta i cambiamenti di ThemeCubit e ricostruisce MaterialApp di conseguenza
         builder: (context, theme) {
           return MaterialApp(
             title: 'Flutter Bloc & Cubit Demo',
             theme: theme, // Applica il tema corrente (Light/Dark)
-            home: HomePage(),
+            home: const HomePage(),
           );
         },
       ),
