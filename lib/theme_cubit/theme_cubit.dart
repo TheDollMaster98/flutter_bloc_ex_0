@@ -10,7 +10,7 @@ class ThemeCubit extends Cubit<ThemeData> {
   static final _lightTheme = ThemeData.light().copyWith(
     primaryColor: Colors.blue,
     floatingActionButtonTheme:
-        FloatingActionButtonThemeData(backgroundColor: Colors.blue),
+        const FloatingActionButtonThemeData(backgroundColor: Colors.blue),
   );
 
   // Definizione del tema scuro

@@ -8,8 +8,10 @@ class FlutterBlocExApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    // BlocProvider fornisce un'istanza di un Bloc o Cubit ai suoi widget figli.
+    // Utilizza il meccanismo di InheritedWidget di Flutter
+    // per rendere il Bloc accessibile lungo l'albero dei widget.
     return BlocProvider(
-      // BlocProvider fornisce il ThemeCubit a tutta l'applicazione
       create: (context) => ThemeCubit(),
       child: BlocBuilder<ThemeCubit, ThemeData>(
         // BlocBuilder ascolta i cambiamenti di ThemeCubit e ricostruisce MaterialApp di conseguenza

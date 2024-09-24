@@ -12,5 +12,5 @@ class CounterInitial extends CounterState {
 
 // Stato che rappresenta un cambiamento nel valore del contatore
 class CounterValueChanged extends CounterState {
-  CounterValueChanged(int value) : super(value);
+  CounterValueChanged(super.value);
 }
