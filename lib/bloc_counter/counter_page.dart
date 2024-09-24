@@ -33,6 +33,9 @@ class CounterView extends StatelessWidget {
     // BlocBuilder ricostruisce il widget quando lo stato cambia.
     // Ricostruisce il suo widget figlio ogni volta che il Bloc o Cubit emette un nuovo stato.
     // Ascolta i cambiamenti di stato e aggiorna l'interfaccia utente di conseguenza.
+    // In altre parole, BlocBuilder ascolta lo stato di un Bloc o Cubit specifico
+    // e aggiorna il suo widget figlio ogni volta che lo stato cambia.
+    // BlocBuilder<BlocType, StateType>
     return BlocBuilder<CounterBloc, CounterState>(
       builder: (context, state) {
         return Text(
