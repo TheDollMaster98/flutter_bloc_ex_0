@@ -1,3 +1,5 @@
+// Deninizioni delle azioni che possono essere eseguite in un bloc o cubit:
+
 // Definizione degli eventi per il CounterBloc
 abstract class CounterEvent {}
 
